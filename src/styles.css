@@ -1,0 +1,65 @@
+@import "@fontsource/ibm-plex-sans-arabic/arabic-400.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-500.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-600.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-700.css";
+@import "@fontsource/ibm-plex-sans-arabic/latin-400.css";
+@import "@fontsource/ibm-plex-sans-arabic/latin-700.css";
+@import "@fontsource/amiri/arabic-400.css";
+@import "@fontsource/amiri/arabic-700.css";
+@import "@fontsource/amiri/latin-400.css";
+@import "@fontsource/amiri/latin-700.css";
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans Arabic", "Noto Naskh Arabic", sans-serif;
+  --font-display: "Amiri", "Noto Naskh Arabic", serif;
+  --color-bg: #f3eee6;
+  --color-surface: #fffcf7;
+  --color-ink: #1f1a16;
+  --color-muted: #746b62;
+  --color-line: #e3d9cc;
+  --color-primary: #a33b2b;
+  --color-primary-fg: #fffaf6;
+}
+
+@utility aspect-product {
+  aspect-ratio: 3 / 4;
+}
+
+@layer base {
+  html {
+    background: var(--color-bg);
+    color: var(--color-ink);
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    text-wrap: pretty;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
