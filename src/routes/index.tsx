@@ -47,7 +47,7 @@ function Home() {
     <Shell shop={shop}>
       <main className="mx-auto max-w-3xl px-4 pb-8 pt-8">
         <h1 className="font-display text-5xl">{shop.name}</h1>
-        <p className="mt-2 text-muted">اختار قسم. جوا بتلاقي الأغراض، ومن الإدارة بتعدّل.</p>
+        <p className="mt-2 text-muted">اختار قسم وتصفّح المنتجات التجريبية — لا توجد مبيعات حقيقية.</p>
         <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
           {sections.map((section) => (
             <li key={section.id}>
@@ -82,7 +82,7 @@ function Home() {
           <Link to="/manage" className="text-ink underline-offset-4 hover:underline">
             إدارة المحل
           </Link>
-          {" — غيّر الاسم، ضيف غرض، أو انقله لقسم ثاني."}
+          {" — معلومات عن تعديل النسخة التجريبية."}
         </p>
       </main>
     </Shell>

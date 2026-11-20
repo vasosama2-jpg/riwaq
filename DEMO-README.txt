@@ -1,0 +1,1 @@
+Riwaq demo: no database or live orders. Product data: src/lib/catalog.server.ts. Management page is informational. To update GitHub Desktop repository, replace project contents (do not delete .git), commit, and push.
